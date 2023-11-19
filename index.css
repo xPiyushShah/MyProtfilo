@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  background-color: #56CDEB;
+  width: 100%;
+  height: 100%;
+}
+.nav-bar {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  font-family: 'Poppins', sans-serif;
+  background: rgba(0,0,0,.1);
+  backdrop-filter: blur(5px);
+}
+.nav-bar-2{
+  display: flex;
+  animation: nav-dis 1s ease forwards;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+@keyframes nav-dis {
+  0% {
+    transform: translateY(-100px);
+  }
+}
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 80px;
+  font-size: 20px;
+}
+.nav-bar a:hover {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin-right: 50px;
+}
+.text-contianer {
+  color: rgb(232, 232, 232);
+  position: absolute;
+  top: 40vh;
+  left: 100px;
+  animation: btn-boom 1s ease forwards;
+}
+.text-box h1 {
+  font-size: 38px;
+  color: white;
+  /* font-family: 'Nunito Sans', sans-serif; */
+}
+.text-main {
+  margin: 6px;
+  padding: 2px;
+  color: rgb(20, 19, 19);
+}
+.text-box .an-text {
+  width: 385px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(237, 34, 183);
+  font-weight: 600;
+}
+.btn-box {
+  position: absolute;
+  margin-top: 26px;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  animation: btn-boom 1s ease forwards;
+  
+}
+.btn-box button {
+  width: 125px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  font-size: 15px;
+  background-color: cyan;
+  font-weight: 500;
+}
+.btn-box button:hover {
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 0 0px rgb(225, 255, 0),0 0 25px rgb(225, 255, 0),
+   0 0 100px rgb(225, 255, 0);
+}
+@keyframes btn-boom {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.social-icon {
+  background-color: transparent;
+  margin-top: 18px;
+  width: fit-content;
+}
+.social-icon i {
+  margin: 15px;
+  padding: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: .3s;
+}
+.social-icon i:hover{
+  background-color: rgb(11, 53, 53);
+  box-shadow: 0 0 25px #F96D10, 0 0 50px #F96D10 ,0 0 100px #F96D10 ;
+}
+.right-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 26vh;
+  right: 60px;
+  width: 470px;
+  height: 290px;
+  animation: lock 5s ease-in infinite forwards;
+}
+.main-box{
+  animation: lock 5s ease-in infinite forwards;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  transform: rotate(45deg);
+  box-shadow: 0 0 25px  yellow, 0 0 50px rgb(11, 231, 44)
+             , 0 0 75px  rgb(209, 54, 54), 0 0 50px rgb(11, 231, 44);
+}
+
+@keyframes loc {
+  0%{ transform:rotateX(180deg);}
+  100%{transform:rotateX(-180deg);}
+}
+.image 
+.image img {
+  position: absolute;
+  top: 20vh;
+  right: 0;
+  height: 380px;
+  width: 500px;
+  background-color: black;
+  animation: image-boom 1s ease-in backwards;
+}
+.image .new img{
+  position: absolute;
+  top: 150px;
+  right: 80px;
+  width: 500px;
+  height: 400px;
+}
+@keyframes image-boom{
+  0%{
+    opacity: 0;
+    transform: rotateX(50deg);
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@media  (min-width: 1024px) {
+    .image .new .img{
+      width: 400px;
+      height: 300px;
+    }
+}
